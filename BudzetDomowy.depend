@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1303063612 source:d:\kurs c++\_projekty\budzetdomowy\src\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1303063612 d:\kurs c++\_projekty\budzetdomowy\include\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1520776341 source:d:\kurs c++\_projekty\budzetdomowy\src\user.cpp
+	"User.h"
+	<iostream>
+	<algorithm>
+
+1520776341 d:\kurs c++\_projekty\budzetdomowy\include\user.h
+	<iostream>
+
+1520784972 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
+	<iostream>
+	<windows.h>
+	"UsersFile.h"
+	"Markup.h"
+
+1520784972 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
+	<iostream>
+	<vector>
+	"User.h"
+
+1520780538 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+	<iostream>
+	<algorithm>
+	"UserManager.h"
+
+1520780040 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
+	<iostream>
+	"UsersFile.h"
+
+1520784651 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	"UserManager.h"
+	"Markup.h"
+
