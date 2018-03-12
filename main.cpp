@@ -1,13 +1,37 @@
-#include <iostream>
-#include <algorithm>
+#include <iostream>     // std::cout
+#include <iomanip>      // std::put_time
+#include <ctime>        // std::time_t, struct std::tm, std::localtime
+#include <chrono>       // std::chrono::system_clock
+
 
 #include "UserManager.h"
+#include "Incomes.h"
 
 using namespace std;
 
-int main()
+
+    /*string date1;
+    cout << "Podaj date: " << endl;
+    cin >> date1;
+    Date data;
+    data.setDate(date1);
+    cout << data.getDate() << endl;*/
+
+
+int main ()
 {
-    UserManager users;
+  //using std::chrono::system_clock;
+  time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
+
+  struct tm * ptm = localtime(&tt);
+  cout << "Now (local time): " << put_time(ptm,"%Y-%m-%d") << '\n';
+
+  return 0;
+}
+
+
+
+  /*  UserManager users;
     UsersFile newUserFile;
     newUserFile.loadUsersData(users.getUsersData());
     char mainMenuOperation;
@@ -86,6 +110,4 @@ int main()
             exit(0);
         }
     }
-}
-    return 0;
-}
+} */

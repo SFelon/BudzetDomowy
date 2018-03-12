@@ -30,10 +30,13 @@
 	"Markup.h"
 	"User.h"
 
-1520881584 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1520891715 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
-	<algorithm>
+	<iomanip>
+	<ctime>
+	<chrono>
 	"UserManager.h"
+	"Incomes.h"
 
 1520881632 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
 	<iostream>
@@ -44,4 +47,33 @@
 
 1520880893 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
 	"UserManager.h"
+
+1520885220 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
+	<iostream>
+	<algorithm>
+	<stdlib.h>
+
+1520887238 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
+	"Amount.h"
+
+1520885396 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
+	"Income.h"
+
+1520885398 d:\kurs c++\_projekty\budzetdomowy\include\income.h
+	<iostream>
+
+1520888212 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
+	"Date.h"
+
+1520887238 d:\kurs c++\_projekty\budzetdomowy\include\date.h
+	<iostream>
+	<algorithm>
+
+1520891688 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+	"Incomes.h"
+
+1520891688 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
+	"Date.h"
+	"Income.h"
+	"Amount.h"
 
