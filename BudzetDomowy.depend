@@ -20,7 +20,7 @@
 	<iostream>
 	<algorithm>
 
-1520880708 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
+1520882032 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
 	"UsersFile.h"
 
 1520880402 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
@@ -30,12 +30,12 @@
 	"Markup.h"
 	"User.h"
 
-1520877557 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1520881584 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	<algorithm>
 	"UserManager.h"
 
-1520876396 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
+1520881632 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
 	<iostream>
 	<windows.h>
 	<cstdlib>

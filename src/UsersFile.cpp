@@ -12,7 +12,7 @@ void UsersFile::loadUsersData(vector <User>& users) {
     User userToLoad;
     CMarkup xmlFile;
 
-    if (xmlFile.Load(MCD_T(fileName))) {
+        xmlFile.Load(MCD_T(fileName));
         xmlFile.FindElem("USERFILE");
         xmlFile.IntoElem();
             while ( xmlFile.FindElem("USERDATA") ) {
@@ -30,16 +30,11 @@ void UsersFile::loadUsersData(vector <User>& users) {
             xmlFile.OutOfElem();
             users.push_back(userToLoad);
         }
-    } else {
-    cout << "Nie mozna otworzyc pliku z danymi uzytkownikow!";
-    Sleep(2000);
-    exit(0);
-}
 }
 
 void UsersFile::saveUsersData(User& newUser) {
 CMarkup xmlFile;
-if (xmlFile.Load(MCD_T(fileName))) {
+    xmlFile.Load(MCD_T(fileName));
     xmlFile.ResetPos();
     if (!xmlFile.FindElem("USERFILE")) {
         xmlFile.AddElem( "USERFILE" );
@@ -56,11 +51,6 @@ if (xmlFile.Load(MCD_T(fileName))) {
     xmlFile.Save(MCD_T(fileName));
     cout<<"Konto zalozone"<<endl;
     Sleep(1000);
-} else {
-  cout << "Nie mozna otworzyc pliku z danymi uzytkownikow!";
-  Sleep(2000);
-  exit(0);
-}
 }
 
 void UsersFile::changeUsersPassword(int& idLoggedUser, string& password) {
