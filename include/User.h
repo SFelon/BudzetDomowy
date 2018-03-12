@@ -1,6 +1,8 @@
 #ifndef USER_H
 #define USER_H
+
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -25,11 +27,11 @@ class User
        string getLogin();
        string getPassword();
 
-       void setID(int identificator);
-       void setName(string userName);
-       void setSurname(string userSurname);
-       void setLogin(string userLogin);
-       void setPassword(string userPassword);
+       void setID(int id);
+       void setName(string name);
+       void setSurname(string surname);
+       void setLogin(string login);
+       void setPassword(string password);
 };
 
 #endif // USER_H

@@ -13,38 +13,35 @@
 	<string>
 	<afx.h>
 
-1520776341 source:d:\kurs c++\_projekty\budzetdomowy\src\user.cpp
+1520879923 source:d:\kurs c++\_projekty\budzetdomowy\src\user.cpp
 	"User.h"
+
+1520875593 d:\kurs c++\_projekty\budzetdomowy\include\user.h
 	<iostream>
 	<algorithm>
 
-1520776341 d:\kurs c++\_projekty\budzetdomowy\include\user.h
-	<iostream>
+1520880708 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
+	"UsersFile.h"
 
-1520784972 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
+1520880402 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
 	<iostream>
 	<windows.h>
-	"UsersFile.h"
-	"Markup.h"
-
-1520784972 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
-	<iostream>
 	<vector>
+	"Markup.h"
 	"User.h"
 
-1520780538 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1520877557 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	<algorithm>
 	"UserManager.h"
 
-1520780040 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
-	<iostream>
-	"UsersFile.h"
-
-1520784651 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
+1520876396 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
 	<iostream>
 	<windows.h>
 	<cstdlib>
-	"UserManager.h"
+	"UsersFile.h"
 	"Markup.h"
+
+1520880893 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
+	"UserManager.h"
 

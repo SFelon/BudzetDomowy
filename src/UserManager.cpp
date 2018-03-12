@@ -1,13 +1,8 @@
-#include <iostream>
-#include <windows.h>
-#include <cstdlib>
-
 #include "UserManager.h"
-#include "Markup.h"
 
 using namespace std;
 
-////////////////////////////////////////////
+
 int UserManager::getNewUserID()
 {
     if (users.empty() == true)
@@ -16,28 +11,24 @@ int UserManager::getNewUserID()
         return users.back().getID() + 1;
 }
 
-////////////////////////////////////////////
-
 
 UserManager::UserManager() {;}
 
 UserManager::~UserManager() {;}
 
-////////////////////////////////////////////
 
 int UserManager::getidLoggedUser() {
-    return idLoggedUser;
+    return this -> idLoggedUser;
 }
 
-void UserManager::setidLoggedUser(int id) {
-    idLoggedUser = id;
+void UserManager::setidLoggedUser(int idLoggedUser) {
+   this -> idLoggedUser = idLoggedUser;
 }
 
 vector <User>& UserManager::getUsersData(){
-        return this->users;
+    return this->users;
 }
 
-//////////////////////////////////////////////
 
 void UserManager::registerNewUser()
 {
@@ -72,12 +63,9 @@ newUser.setLogin(login);
 newUser.setPassword(password);
 users.push_back(newUser);
 usersFile.saveUsersData(newUser);
-
-cout<<"Konto zalozone"<<endl;
-Sleep(1000);
 }
 
-////////////////////////////////////////////
+
 void UserManager::loginUser()
 {
     string login, password;
@@ -107,7 +95,7 @@ void UserManager::loginUser()
     idLoggedUser = 0;
     return;
 }
-////////////////////////////////////////////
+
 
 void UserManager::changePassword() {
     UsersFile usersFile;

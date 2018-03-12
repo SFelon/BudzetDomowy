@@ -2,7 +2,11 @@
 #define USERMANAGER_H
 
 #include <iostream>
+#include <windows.h>
+#include <cstdlib>
+
 #include "UsersFile.h"
+#include "Markup.h"
 
 using namespace std;
 
@@ -18,7 +22,7 @@ class UserManager
         virtual ~UserManager();
 
     int getidLoggedUser();
-    void setidLoggedUser(int id);
+    void setidLoggedUser(int idLoggedUser);
 
     vector <User>& getUsersData();
 

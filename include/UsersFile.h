@@ -2,14 +2,17 @@
 #define USERSFILE_H
 
 #include <iostream>
+#include <windows.h>
 #include <vector>
 
+#include "Markup.h"
 #include "User.h"
 
 using namespace std;
 
 class UsersFile
 {
+    string fileName;
     public:
         UsersFile();
         virtual ~UsersFile();

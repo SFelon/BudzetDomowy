@@ -1,6 +1,4 @@
 #include "User.h"
-#include <iostream>
-#include <algorithm>
 
 using namespace std;
 
@@ -15,7 +13,13 @@ string User::changeFirstLetterToUpper(string text)
 }
 
 
-User::User() {;}
+User::User() {
+    id = 0;
+    name = "";
+    surname = "";
+    login = "";
+    password = "";
+}
 
 User::~User() {;}
 
@@ -35,18 +39,18 @@ string User::getPassword() {
     return password;
 }
 
-void User::setID(int identificator) {
-    id = identificator;
+void User::setID(int id) {
+    this -> id = id;
 }
-void User::setName(string userName) {
-    name = changeFirstLetterToUpper(userName);
+void User::setName(string name) {
+    this -> name = changeFirstLetterToUpper(name);
 }
-void User::setSurname(string userSurname) {
-    surname = changeFirstLetterToUpper(userSurname);
+void User::setSurname(string surname) {
+    this -> surname = changeFirstLetterToUpper(surname);
 }
-void User::setLogin(string userLogin) {
-    login = userLogin;
+void User::setLogin(string login) {
+    this -> login = login;
 }
-void User::setPassword(string userPassword) {
-    password = userPassword;
+void User::setPassword(string password) {
+    this -> password = password;
 }

@@ -1,71 +1,88 @@
-#include <iostream>
-#include <windows.h>
-
 #include "UsersFile.h"
-#include "Markup.h"
 
 using namespace std;
 
-UsersFile::UsersFile() {;}
+UsersFile::UsersFile() {
+fileName = "users.xml";
+}
 
 UsersFile::~UsersFile() {;}
 
 void UsersFile::loadUsersData(vector <User>& users) {
     User userToLoad;
-    CMarkup xml;
+    CMarkup xmlFile;
 
-    xml.Load(MCD_T("Users.xml"));
-    xml.FindElem();
-    xml.IntoElem();
-    while ( xml.FindElem("USERDATA") ) {
-        xml.IntoElem();
-        xml.FindElem( "ID" );
-            userToLoad.setID(atoi( MCD_2PCSZ(xml.GetData()) ));
-        xml.FindElem( "NAME" );
-            userToLoad.setName(xml.GetData());
-        xml.FindElem( "SURNAME" );
-            userToLoad.setSurname(xml.GetData());
-        xml.FindElem( "LOGIN" );
-            userToLoad.setLogin(xml.GetData());
-        xml.FindElem( "PASSWORD" );
-            userToLoad.setPassword(xml.GetData());
-        xml.OutOfElem();
-        users.push_back(userToLoad);
-    }
+    if (xmlFile.Load(MCD_T(fileName))) {
+        xmlFile.FindElem("USERFILE");
+        xmlFile.IntoElem();
+            while ( xmlFile.FindElem("USERDATA") ) {
+            xmlFile.IntoElem();
+            xmlFile.FindElem( "USERID" );
+                userToLoad.setID(atoi( MCD_2PCSZ(xmlFile.GetData()) ));
+            xmlFile.FindElem( "NAME" );
+                userToLoad.setName(xmlFile.GetData());
+            xmlFile.FindElem( "SURNAME" );
+                userToLoad.setSurname(xmlFile.GetData());
+            xmlFile.FindElem( "LOGIN" );
+                userToLoad.setLogin(xmlFile.GetData());
+            xmlFile.FindElem( "PASSWORD" );
+                userToLoad.setPassword(xmlFile.GetData());
+            xmlFile.OutOfElem();
+            users.push_back(userToLoad);
+        }
+    } else {
+    cout << "Nie mozna otworzyc pliku z danymi uzytkownikow!";
+    Sleep(2000);
+    exit(0);
+}
 }
 
 void UsersFile::saveUsersData(User& newUser) {
-    CMarkup xml;
-    xml.Load(MCD_T("Users.xml"));
-    xml.ResetPos();
-    xml.FindElem();
-    xml.IntoElem();
-        xml.AddElem( "USERDATA" );
-        xml.IntoElem();
-        xml.AddElem( "ID", newUser.getID() );
-        xml.AddElem( "NAME", newUser.getName() );
-        xml.AddElem( "SURNAME", newUser.getSurname() );
-        xml.AddElem( "LOGIN", newUser.getLogin() );
-        xml.AddElem( "PASSWORD", newUser.getPassword() );
-        xml.OutOfElem();
-    xml.Save(MCD_T("Users.xml"));
+CMarkup xmlFile;
+if (xmlFile.Load(MCD_T(fileName))) {
+    xmlFile.ResetPos();
+    if (!xmlFile.FindElem("USERFILE")) {
+        xmlFile.AddElem( "USERFILE" );
+        }
+        xmlFile.IntoElem();
+        xmlFile.AddElem( "USERDATA" );
+        xmlFile.IntoElem();
+        xmlFile.AddElem( "USERID", newUser.getID() );
+        xmlFile.AddElem( "NAME", newUser.getName() );
+        xmlFile.AddElem( "SURNAME", newUser.getSurname() );
+        xmlFile.AddElem( "LOGIN", newUser.getLogin() );
+        xmlFile.AddElem( "PASSWORD", newUser.getPassword() );
+        xmlFile.OutOfElem();
+    xmlFile.Save(MCD_T(fileName));
+    cout<<"Konto zalozone"<<endl;
+    Sleep(1000);
+} else {
+  cout << "Nie mozna otworzyc pliku z danymi uzytkownikow!";
+  Sleep(2000);
+  exit(0);
+}
 }
 
 void UsersFile::changeUsersPassword(int& idLoggedUser, string& password) {
-    CMarkup xml;
-    xml.Load(MCD_T("Users.xml"));
-    xml.ResetPos();
-    xml.FindElem();
-    xml.IntoElem();
-    while ( xml.FindElem("USERDATA") ) {
-        xml.FindChildElem( "ID" );
-        if ( atoi( MCD_2PCSZ(xml.GetChildData()) ) == idLoggedUser ) {
-            xml.FindChildElem( "PASSWORD" );
-            xml.SetChildData( password );
-            break;
+    CMarkup xmlFile;
+    if (xmlFile.Load(MCD_T(fileName))) {
+        xmlFile.ResetPos();
+        xmlFile.FindElem("USERFILE");
+        xmlFile.IntoElem();
+        while ( xmlFile.FindElem("USERDATA") ) {
+            xmlFile.FindChildElem( "USERID" );
+            if ( atoi( MCD_2PCSZ(xmlFile.GetChildData()) ) == idLoggedUser ) {
+                xmlFile.FindChildElem( "PASSWORD" );
+                xmlFile.SetChildData( password );
+                break;
+            }
         }
-    }
-    xml.Save(MCD_T("Users.xml"));
-    cout<<"Haslo zostalo zmienione";
-    Sleep(1000);
+        xmlFile.Save(MCD_T(fileName));
+        cout<<"Haslo zostalo zmienione";
+        Sleep(1000);
+    } else {
+    cout << "Nie mozna otworzyc pliku z danymi uzytkownikow!";
+    Sleep(2000);
+    exit(0);
+}
 }

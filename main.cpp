@@ -10,7 +10,6 @@ int main()
     UserManager users;
     UsersFile newUserFile;
     newUserFile.loadUsersData(users.getUsersData());
-
     char mainMenuOperation;
 
     while(true) {
