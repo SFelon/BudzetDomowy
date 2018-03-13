@@ -7,7 +7,11 @@ Incomes::Incomes() {;}
 Incomes::~Incomes() {;}
 
 void Incomes::setNewIncome(string date, string itemName, string amount) {
-incomeDate.setDate(date);
-incomeName.setItemName(itemName);
-incomeAmount.setAmount(amount);
+this -> incomeDate.setDate(date);
+this -> incomeName.setItemName(itemName);
+this -> incomeAmount.setAmount(amount);
+}
+
+string Incomes::getIncome() {
+cout << incomeDate.getDate() << " " << incomeName.getItemName() << " " << incomeAmount.getAmount() << endl;
 }

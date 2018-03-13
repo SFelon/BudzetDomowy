@@ -20,6 +20,12 @@ using namespace std;
 
 int main ()
 {
+
+    Incomes income;
+    income.setNewIncome("2018-03-10","Allegro","56,35");
+    income.getIncome();
+
+
   //using std::chrono::system_clock;
   time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
 

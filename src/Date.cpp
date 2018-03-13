@@ -53,15 +53,17 @@ bool isValidDate(int d, int m, int y)
 }*/
 
 Date::Date() {
-date = 0;
+dateShort = 0;
+dateLong = "";
 }
 
 Date::~Date() {;}
 
 void Date::setDate(string date) {
-this -> date = convertStringToInt(date);
+this -> dateLong  = date;
+this -> dateShort = convertStringToInt(date);
 }
 
-int Date::getDate() {
-return date;
+string Date::getDate() {
+return dateLong;
 }

@@ -9,7 +9,8 @@ using namespace std;
 
 class Date
 {
-    int date;
+    int dateShort;
+    string dateLong;
     int year;
     int month;
     int day;
@@ -22,7 +23,7 @@ class Date
         virtual ~Date();
 
     void setDate(string date);
-    int getDate();
+    string getDate();
 };
 
 #endif // DATE_H

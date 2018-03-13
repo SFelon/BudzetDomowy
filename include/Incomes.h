@@ -18,7 +18,7 @@ class Incomes
         virtual ~Incomes();
 
     void setNewIncome(string date, string itemName, string amount);
-
+    string getIncome();
 };
 
 #endif // INCOMES_H
