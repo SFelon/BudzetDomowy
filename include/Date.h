@@ -23,7 +23,8 @@ class Date
         virtual ~Date();
 
     void setDate(string date);
-    string getDate();
+    string getDateLong();
+    int getDateShort();
 };
 
 #endif // DATE_H

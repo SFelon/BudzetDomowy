@@ -64,6 +64,10 @@ this -> dateLong  = date;
 this -> dateShort = convertStringToInt(date);
 }
 
-string Date::getDate() {
+string Date::getDateLong() {
 return dateLong;
+}
+
+int Date::getDateShort() {
+return dateShort;
 }

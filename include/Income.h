@@ -14,6 +14,7 @@ class Income
 
     void setItemName(string itemName);
     string getItemName();
+
 };
 
 #endif // INCOME_H

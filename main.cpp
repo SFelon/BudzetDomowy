@@ -9,35 +9,8 @@
 
 using namespace std;
 
-
-    /*string date1;
-    cout << "Podaj date: " << endl;
-    cin >> date1;
-    Date data;
-    data.setDate(date1);
-    cout << data.getDate() << endl;*/
-
-
-int main ()
-{
-
-    Incomes income;
-    income.setNewIncome("2018-03-10","Allegro","56,35");
-    income.getIncome();
-
-
-  //using std::chrono::system_clock;
-  time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
-
-  struct tm * ptm = localtime(&tt);
-  cout << "Now (local time): " << put_time(ptm,"%Y-%m-%d") << '\n';
-
-  return 0;
-}
-
-
-
-  /*  UserManager users;
+int main () {
+    UserManager users;
     UsersFile newUserFile;
     newUserFile.loadUsersData(users.getUsersData());
     char mainMenuOperation;
@@ -67,7 +40,7 @@ int main ()
         }
     }  else if (users.getidLoggedUser() > 0) {
 
-    //AddressBook contacts(users.getidLoggedUser());
+    //Incomes income(users.getidLoggedUser());
     //contacts.loadAddressBook();
     char menuOperation;
 
@@ -75,7 +48,7 @@ int main ()
         cout<<"------------------"<<endl;
         cout<<"  BUDZET DOMOWY:  "<<endl;
         cout<<"------------------"<<endl;
-        cout<<"1. W budowie"<<endl;
+        cout<<"1. Dodaj nowy przychod"<<endl;
         cout<<"2. W budowie"<<endl;
         cout<<"3. W budowie"<<endl;
         cout<<"4. W budowie"<<endl;
@@ -85,10 +58,12 @@ int main ()
         cout<<"8. Zakoncz program"<<endl;
         cin >> menuOperation;
         switch (menuOperation) {
-        case '1':
-            //contacts.addNewContact();
+        case '1': {
+            Incomes income(users.getidLoggedUser());
+            income.addNewIncome();
             system("cls");
             break;
+            }
         case '2':
             //contacts.findContact();
             system("cls");
@@ -116,4 +91,20 @@ int main ()
             exit(0);
         }
     }
-} */
+}
+  return 0;
+}
+
+    /*Incomes income;
+    income.setNewIncome("2018-03-10","Allegro","56,35");
+    income.getIncome();
+
+
+  //using std::chrono::system_clock;
+  time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
+
+  struct tm * ptm = localtime(&tt);
+  cout << "Now (local time): " << put_time(ptm,"%Y-%m-%d") << '\n';*/
+
+
+
