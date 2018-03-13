@@ -53,11 +53,14 @@ do {
             cout << "Podaj kwote uzyskanego przychodu: "  << endl;
             cin >> newAmount;
 
+            cout << "Wejscie w funkcje loadLastId" << endl;
             setIncomeId(incomeFile.loadLastIdNumber(idLoggedUser));
-            cout << newDate << endl;
-            cout << getIncomeId() << endl;
+            cout << "Wynik " << getIncomeId() << endl;
             setNewIncome(newDate, newItemName, newAmount);
             getIncome();
+            incomeFile.saveIncomeData(incomeId, idLoggedUser, incomeDate.getDateShort(), incomeName.getItemName(), incomeAmount.getAmount());
+
+
             } else if ((menuOperation == '2')) {}
 
 

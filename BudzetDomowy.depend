@@ -62,14 +62,14 @@
 1520975376 d:\kurs c++\_projekty\budzetdomowy\include\income.h
 	<iostream>
 
-1520970948 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
+1520978335 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
 	"Date.h"
 
 1520978335 d:\kurs c++\_projekty\budzetdomowy\include\date.h
 	<iostream>
 	<algorithm>
 
-1520977360 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1520980975 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
 1520977984 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
@@ -82,10 +82,11 @@
 	"Income.h"
 	"Amount.h"
 
-1520975376 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
+1520979849 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
 	<iostream>
+	<windows.h>
 	"Markup.h"
 
-1520975391 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
+1520981642 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 

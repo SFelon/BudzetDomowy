@@ -2,6 +2,7 @@
 #define INCOMESFILE_H
 
 #include <iostream>
+#include <windows.h>
 
 #include "Markup.h"
 
@@ -14,9 +15,9 @@ class IncomesFile
         IncomesFile();
         virtual ~IncomesFile();
 
-    int loadLastIdNumber(int userId);
+    int loadLastIdNumber(int& userId);
     void loadIncomesData();
-    void saveIncomeData();
+    void saveIncomeData(int& incomeId, int& userId, int date, string name, double amount);
 };
 
 #endif // INCOMESFILE_H

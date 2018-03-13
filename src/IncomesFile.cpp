@@ -9,7 +9,7 @@ incomesFileName = "incomes.xml";
 IncomesFile::~IncomesFile() {;}
 
 
-int IncomesFile::loadLastIdNumber(int userId) {
+int IncomesFile::loadLastIdNumber(int& userId) {
 
 int lastIdNumber = 1;
 CMarkup xmlFile;
@@ -21,17 +21,13 @@ CMarkup xmlFile;
         xmlFile.IntoElem();
         while ( xmlFile.FindElem( "INCOMEDATA" ) ) {
             xmlFile.IntoElem();
-            xmlFile.FindElem( "USERID" );
-            xmlFile.IntoElem();
-            if ( userId == (atoi( MCD_2PCSZ(xmlFile.GetData()) ))) {
-                xmlFile.ResetMainPos();
-                xmlFile.FindElem( "INCOMEID" );
-                xmlFile.IntoElem();
-                if (lastIdNumber <= atoi( MCD_2PCSZ(xmlFile.GetData()) ))
-                    lastIdNumber = atoi( MCD_2PCSZ(xmlFile.GetData()) );
-                }
+            xmlFile.FindElem( "INCOMEID" );
+            if (lastIdNumber <= atoi( MCD_2PCSZ(xmlFile.GetData()) ))
+            lastIdNumber = atoi( MCD_2PCSZ(xmlFile.GetData()) ) + 1;
+            cout << lastIdNumber << " lastId po dodawaniu" << endl;
+            xmlFile.OutOfElem();
             }
-            return lastIdNumber;
+        return lastIdNumber;
 }
 
 
@@ -58,9 +54,9 @@ void IncomesFile::loadIncomesData() {
         }*/
 }
 
-void IncomesFile::saveIncomeData() {
+void IncomesFile::saveIncomeData(int& incomeId, int& userId, int date, string name, double amount) {
 CMarkup xmlFile;
-   /* xmlFile.Load(MCD_T(incomesFileName));
+    xmlFile.Load(MCD_T(incomesFileName));
     xmlFile.ResetPos();
     if (!xmlFile.FindElem("INCOMESFILE")) {
         xmlFile.AddElem( "INCOMESFILE" );
@@ -68,13 +64,14 @@ CMarkup xmlFile;
         xmlFile.IntoElem();
         xmlFile.AddElem( "INCOMEDATA" );
         xmlFile.IntoElem();
-        xmlFile.AddElem( "INCOMEID", newUser.getID() );
-        xmlFile.AddElem( "USERID", newUser.getName() );
-        xmlFile.AddElem( "INCOMEDATE", newUser.getSurname() );
-        xmlFile.AddElem( "INCOMENAME", newUser.getLogin() );
-        xmlFile.AddElem( "INCOMEAMOUNT", newUser.getPassword() );
+        xmlFile.AddElem( "INCOMEID", incomeId );
+        xmlFile.AddElem( "USERID", userId );
+        xmlFile.AddElem( "INCOMEDATE", date );
+        xmlFile.AddElem( "INCOMENAME", name );
+        xmlFile.AddElem( "INCOMEAMOUNT", amount );
         xmlFile.OutOfElem();
     xmlFile.Save(MCD_T(incomesFileName));
-    cout<<"Konto zalozone"<<endl;
-    Sleep(1000);*/
+
+    cout<<"Dodano nowy przychod!"<<endl;
+    Sleep(1500);
 }
