@@ -1,9 +1,4 @@
-#include <iostream>     // std::cout
-#include <iomanip>      // std::put_time
-#include <ctime>        // std::time_t, struct std::tm, std::localtime
-#include <chrono>       // std::chrono::system_clock
-
-
+#include <iostream>
 #include "UserManager.h"
 #include "Incomes.h"
 
@@ -40,8 +35,6 @@ int main () {
         }
     }  else if (users.getidLoggedUser() > 0) {
 
-    //Incomes income(users.getidLoggedUser());
-    //contacts.loadAddressBook();
     char menuOperation;
 
         system("cls");
@@ -94,17 +87,3 @@ int main () {
 }
   return 0;
 }
-
-    /*Incomes income;
-    income.setNewIncome("2018-03-10","Allegro","56,35");
-    income.getIncome();
-
-
-  //using std::chrono::system_clock;
-  time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
-
-  struct tm * ptm = localtime(&tt);
-  cout << "Now (local time): " << put_time(ptm,"%Y-%m-%d") << '\n';*/
-
-
-
