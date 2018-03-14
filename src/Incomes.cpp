@@ -24,7 +24,7 @@ incomeAmount.setAmount(amount);
 }
 
 void Incomes::getIncome() {
-cout <<getIncomeId()<<" "<< incomeDate.getDateLong() << " " << incomeName.getItemName() << " " << incomeAmount.getAmount() << endl;
+cout <<getIncomeId()<<" "<< incomeDate.getDateLong() << " " << incomeName.getItemName() << " " << incomeAmount.getAmountString() << endl;
 }
 
 void Incomes::addNewIncome() {
@@ -40,7 +40,7 @@ do {
         cout<<"------------------"<<endl;
         cout<<"1. Dodaj przychod z dzisiejsza data"<<endl;
         cout<<"2. Dodaj przychod z wybrana data - W BUDOWIE"   <<endl;
-        cin >> menuOperation;
+        cin >> menuOperation; cin.clear();
         if (menuOperation == '1') {
             time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
             struct tm * ptm = localtime(&tt);
@@ -49,19 +49,35 @@ do {
             newDate = dateStream.str();
             cout << "Dzisiejsza data to: " << newDate << endl;
             cout << "Podaj nazwe uzyskanego przychodu: "  << endl;
-            cin >> newItemName;
+            getline(cin, newItemName); cin.clear();
             cout << "Podaj kwote uzyskanego przychodu: "  << endl;
-            cin >> newAmount;
+            cin >> newAmount; cin.clear();
 
             cout << "Wejscie w funkcje loadLastId" << endl;
             setIncomeId(incomeFile.loadLastIdNumber(idLoggedUser));
             cout << "Wynik " << getIncomeId() << endl;
             setNewIncome(newDate, newItemName, newAmount);
             getIncome();
-            incomeFile.saveIncomeData(incomeId, idLoggedUser, incomeDate.getDateShort(), incomeName.getItemName(), incomeAmount.getAmount());
+            incomeFile.saveIncomeData(incomeId, idLoggedUser, incomeDate.getDateShort(), incomeName.getItemName(),
+                                      incomeAmount.getAmountString());
 
 
-            } else if ((menuOperation == '2')) {}
+            } else if ((menuOperation == '2')) {
+            cout << "Podaj date uzyskania przychodu (RRRR-MM-DD): "  << endl;
+            cin >> newDate;
+            incomeDate.setDate(newDate);
+            cout << "Podaj nazwe uzyskanego przychodu: "             << endl;
+            getline(cin, newItemName); cin.clear();
+            cout << "Podaj kwote uzyskanego przychodu: "             << endl;
+            cin >> newAmount; cin.clear();
+
+
+
+
+
+
+
+            }
 
 
 

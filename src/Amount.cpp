@@ -2,22 +2,29 @@
 
 using namespace std;
 
-double Amount::changeCommaToDot(string amountToCheck) {
+string Amount::changeCommaToDot(string amountToCheck) {
 replace(amountToCheck.begin(), amountToCheck.end(), ',', '.');
-return  atof(amountToCheck.c_str());
+return amountToCheck;
 }
 
 Amount::Amount() {
-amount = 0;
+amountNumber = 0;
+amountString = "";
 }
 
 Amount::~Amount() {;}
 
 void Amount::setAmount(string amount) {
-this -> amount = changeCommaToDot(amount);
+string tempNumber;
+tempNumber = changeCommaToDot(amount);
+this -> amountString = tempNumber;
+this -> amountNumber = atof(tempNumber.c_str());
 }
 
-double Amount::getAmount() {
-return amount;
+double Amount::getAmountNumber() {
+return amountNumber;
 }
 
+string Amount::getAmountString() {
+return amountString;
+}

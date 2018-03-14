@@ -17,7 +17,7 @@ class IncomesFile
 
     int loadLastIdNumber(int& userId);
     void loadIncomesData();
-    void saveIncomeData(int& incomeId, int& userId, int date, string name, double amount);
+    void saveIncomeData(int& incomeId, int& userId, int date, string name, string amount);
 };
 
 #endif // INCOMESFILE_H

@@ -1,6 +1,11 @@
 #ifndef DATE_H
 #define DATE_H
 
+#include <iomanip>      // std::put_time
+#include <ctime>        // std::time_t, struct std::tm, std::localtime
+#include <chrono>       // std::chrono::system_clock
+#include <sstream>
+
 #include <iostream>
 #include <algorithm>
 

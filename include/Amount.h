@@ -9,15 +9,17 @@ using namespace std;
 
 class Amount
 {
-    double amount;
-    double changeCommaToDot(string amountToCheck);
+    string amountString;
+    double amountNumber;
+    string changeCommaToDot(string amountToCheck);
 
     public:
         Amount();
         virtual ~Amount();
 
     void setAmount(string amount);
-    double getAmount();
+    double getAmountNumber();
+    string getAmountString();
 };
 
 #endif // AMOUNT_H

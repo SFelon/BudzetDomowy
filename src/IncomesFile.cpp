@@ -54,7 +54,7 @@ void IncomesFile::loadIncomesData() {
         }*/
 }
 
-void IncomesFile::saveIncomeData(int& incomeId, int& userId, int date, string name, double amount) {
+void IncomesFile::saveIncomeData(int& incomeId, int& userId, int date, string name, string amount) {
 CMarkup xmlFile;
     xmlFile.Load(MCD_T(incomesFileName));
     xmlFile.ResetPos();

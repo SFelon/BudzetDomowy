@@ -7,50 +7,48 @@ date.erase(remove(date.begin(), date.end(), '-'), date.end());
 return atoi(date.c_str());
 }
 
-/*bool isValidDate(int date) {
+bool isValidDate(int date) {
 
-const int MAX_VALID_YR = 9999;
+int day = date % 100;
+int month = (date % 10000)/100;
+int year = date / 10000;
+
+
 const int MIN_VALID_YR = 2000;
+int MAX_VALID_YR;
+int MAX_VALID_MNT;
 
-// Returns true if given year is valid.
-bool isLeap(int year)
-{
-  // Return true if year is a multiple pf 4 and
-  // not multiple of 100.
-  // OR year is multiple of 400.
-  return (((year%4==0) && (year%100!=0)) ||
-           (year%400==0));
-}
+time_t tt = chrono::system_clock::to_time_t (chrono::system_clock::now());
+struct tm * ptm = localtime(&tt);
+stringstream dateStream;
+dateStream << put_time(ptm,"%Y");
+    MAX_VALID_YR = stoi(dateStream.str());
+dateStream.str(string());
+dateStream <<  put_time(ptm,"%m");
+    MAX_VALID_MNT = stoi(dateStream.str());
 
-// Returns true if given year is valid or not.
-bool isValidDate(int d, int m, int y)
-{
-    // If year, month and day are not in given range
-    if (y > MAX_VALID_YR || y < MIN_VALID_YR)
+
+    if (year > MAX_VALID_YR || year < MIN_VALID_YR)
       return false;
-    if (m < 1 || m > 12)
+    if (year == MAX_VALID_YR && month > MAX_VALID_MNT)
       return false;
-    if (d < 1 || d > 31)
+    if (month < 1 || month > 12)
+      return false;
+    if (day < 1 || day > 31)
       return false;
 
-    // Handle February month with leap year
-    if (m == 2)
-    {
-        if (isLeap(y))
-           return (d <= 29);
+    if (month == 2) {
+        if ((((year%4 == 0) && (year%100!=0)) || (year%400 == 0)))
+           return (day <= 29);
         else
-           return (d <= 28);
+           return (day <= 28);
     }
 
-    // Months of April, June, Sept and Nov
-    // must have number of days less than
-    // or equal to 30.
-    if (m==4 || m==6 || m==9 || m==11)
-        return (d <= 30);
+    if (month == 4 || month == 6 || month == 9 || month == 11)
+        return (day <= 30);
 
     return true;
 }
-}*/
 
 Date::Date() {
 dateShort = 0;
