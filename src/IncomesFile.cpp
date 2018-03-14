@@ -24,14 +24,13 @@ CMarkup xmlFile;
             xmlFile.FindElem( "INCOMEID" );
             if (lastIdNumber <= atoi( MCD_2PCSZ(xmlFile.GetData()) ))
             lastIdNumber = atoi( MCD_2PCSZ(xmlFile.GetData()) ) + 1;
-            cout << lastIdNumber << " lastId po dodawaniu" << endl;
             xmlFile.OutOfElem();
             }
         return lastIdNumber;
 }
 
 
-void IncomesFile::loadIncomesData() {
+void IncomesFile::loadIncomesData() { // W BUDOWIE
     CMarkup xmlFile;
 
         /*xmlFile.Load(MCD_T(incomesFileName));

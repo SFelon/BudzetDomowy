@@ -2,9 +2,22 @@
 
 using namespace std;
 
-string Amount::changeCommaToDot(string amountToCheck) {
-replace(amountToCheck.begin(), amountToCheck.end(), ',', '.');
-return amountToCheck;
+bool Amount::isValidAmount(const string& amount)
+{
+    try
+    {
+        stod(amount);
+    }
+    catch(...)
+    {
+        return false;
+    }
+    return true;
+}
+
+string Amount::changeCommaToDot(string amount) {
+replace(amount.begin(), amount.end(), ',', '.');
+return amount;
 }
 
 Amount::Amount() {
@@ -15,10 +28,14 @@ amountString = "";
 Amount::~Amount() {;}
 
 void Amount::setAmount(string amount) {
-string tempNumber;
-tempNumber = changeCommaToDot(amount);
-this -> amountString = tempNumber;
-this -> amountNumber = atof(tempNumber.c_str());
+do {
+if (!isValidAmount(changeCommaToDot(amount))) {
+    cout << "Niepoprawna kwota. Sprobuj ponownie: " << endl;
+    cin >> amount;
+    }
+    } while (!isValidAmount(changeCommaToDot(amount)));
+this -> amountString = amount;
+this -> amountNumber = atof(amount.c_str());
 }
 
 double Amount::getAmountNumber() {

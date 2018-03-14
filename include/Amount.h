@@ -11,7 +11,9 @@ class Amount
 {
     string amountString;
     double amountNumber;
-    string changeCommaToDot(string amountToCheck);
+
+    bool isValidAmount(const string& amount);
+    string changeCommaToDot(string amount);
 
     public:
         Amount();

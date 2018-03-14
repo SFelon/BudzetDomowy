@@ -1,9 +1,9 @@
 #ifndef DATE_H
 #define DATE_H
 
-#include <iomanip>      // std::put_time
-#include <ctime>        // std::time_t, struct std::tm, std::localtime
-#include <chrono>       // std::chrono::system_clock
+#include <iomanip>
+#include <ctime>
+#include <chrono>
 #include <sstream>
 
 #include <iostream>
@@ -11,14 +11,10 @@
 
 using namespace std;
 
-
 class Date
 {
     int dateShort;
     string dateLong;
-    int year;
-    int month;
-    int day;
 
     int convertStringToInt(string date);
     bool isValidDate(int date);

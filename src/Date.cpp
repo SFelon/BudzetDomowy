@@ -7,7 +7,7 @@ date.erase(remove(date.begin(), date.end(), '-'), date.end());
 return atoi(date.c_str());
 }
 
-bool isValidDate(int date) {
+bool Date::isValidDate(int date) {
 
 int day = date % 100;
 int month = (date % 10000)/100;
@@ -58,8 +58,14 @@ dateLong = "";
 Date::~Date() {;}
 
 void Date::setDate(string date) {
-this -> dateLong  = date;
-this -> dateShort = convertStringToInt(date);
+do {
+    if(!isValidDate(convertStringToInt(date))) {
+    cout << "Bledna data. Wprowadz ponownie: " << endl;
+    cin >> date;
+    }
+    } while(!isValidDate(convertStringToInt(date)));
+    this -> dateLong  = date;
+    this -> dateShort = convertStringToInt(date);
 }
 
 string Date::getDateLong() {

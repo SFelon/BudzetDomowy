@@ -48,12 +48,12 @@
 1520880893 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
 	"UserManager.h"
 
-1521049503 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
+1521059674 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
 	<iostream>
 	<algorithm>
 	<stdlib.h>
 
-1521049516 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
+1521060843 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
 	"Amount.h"
 
 1520885396 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
@@ -62,10 +62,10 @@
 1520975376 d:\kurs c++\_projekty\budzetdomowy\include\income.h
 	<iostream>
 
-1520978335 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
+1521060868 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
 	"Date.h"
 
-1521051444 d:\kurs c++\_projekty\budzetdomowy\include\date.h
+1521057715 d:\kurs c++\_projekty\budzetdomowy\include\date.h
 	<iomanip>
 	<ctime>
 	<chrono>
@@ -73,7 +73,7 @@
 	<iostream>
 	<algorithm>
 
-1520980975 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1521057715 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
 1521051444 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
@@ -87,6 +87,6 @@
 	<windows.h>
 	"Markup.h"
 
-1521049502 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
+1521057879 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 
