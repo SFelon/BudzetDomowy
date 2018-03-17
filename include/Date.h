@@ -13,8 +13,7 @@ using namespace std;
 
 class Date
 {
-    int dateShort;
-    string dateLong;
+    string date;
 
     int convertStringToInt(string date);
     bool isValidDate(int date);
@@ -24,8 +23,8 @@ class Date
         virtual ~Date();
 
     void setDate(string date);
-    string getDateLong();
-    int getDateShort();
+    string getDateString();
+    int getDateNumber();
 };
 
 #endif // DATE_H

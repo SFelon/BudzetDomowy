@@ -1,35 +1,31 @@
 #ifndef INCOMES_H
 #define INCOMES_H
 
+#include <vector>
 #include "IncomesFile.h"
-#include "Date.h"
 #include "Income.h"
-#include "Amount.h"
+
 
 using namespace std;
 
 class Incomes
 {
     int idLoggedUser;
-    int incomeId;
 
     IncomesFile incomeFile;
+    vector <Income> incomes;
 
-    Date incomeDate;
-    Income incomeName;
-    Amount incomeAmount;
+    string getCurrentDate();
+    void showIncomeData(Income income);
 
     public:
         Incomes(int userId);
         virtual ~Incomes();
 
-    void setIncomeId(int lastIdNumber);
-    int getIncomeId();
-
-    void setNewIncome(string date, string itemName, string amount);
-    void getIncome();
 
     void addNewIncome();
+    void loadCurrentMonthIncomes();
+    void loadPreviousMonthIncomes();
 };
 
 #endif // INCOMES_H

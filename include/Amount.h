@@ -9,7 +9,6 @@ using namespace std;
 
 class Amount
 {
-    string amountString;
     double amountNumber;
 
     bool isValidAmount(const string& amount);
@@ -21,7 +20,6 @@ class Amount
 
     void setAmount(string amount);
     double getAmountNumber();
-    string getAmountString();
 };
 
 #endif // AMOUNT_H

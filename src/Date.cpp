@@ -51,8 +51,7 @@ dateStream <<  put_time(ptm,"%m");
 }
 
 Date::Date() {
-dateShort = 0;
-dateLong = "";
+date = "";
 }
 
 Date::~Date() {;}
@@ -64,14 +63,13 @@ do {
     cin >> date;
     }
     } while(!isValidDate(convertStringToInt(date)));
-    this -> dateLong  = date;
-    this -> dateShort = convertStringToInt(date);
+    this -> date = date;
 }
 
-string Date::getDateLong() {
-return dateLong;
+string Date::getDateString() {
+return date;
 }
 
-int Date::getDateShort() {
-return dateShort;
+int Date::getDateNumber() {
+return convertStringToInt(date);
 }

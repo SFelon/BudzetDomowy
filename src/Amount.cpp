@@ -2,46 +2,48 @@
 
 using namespace std;
 
-bool Amount::isValidAmount(const string& amount)
-{
-    try
-    {
-        stod(amount);
-    }
-    catch(...)
-    {
-        return false;
-    }
-    return true;
-}
-
 string Amount::changeCommaToDot(string amount) {
 replace(amount.begin(), amount.end(), ',', '.');
 return amount;
 }
 
+bool Amount::isValidAmount(const string& amount) {
+    int nb_point = 0;
+    for (int i=0; i < amount.length(); i++) {
+         if (amount[i] == '.') {
+              nb_point++;
+         }
+         else if (!isdigit(amount[i]) || (amount[0] == '0')) {
+              return false;
+         }
+    }
+    if (nb_point <= 1) {
+          return true;
+    }
+    else {
+          return false;
+    }
+}
+
+
 Amount::Amount() {
 amountNumber = 0;
-amountString = "";
 }
 
 Amount::~Amount() {;}
 
 void Amount::setAmount(string amount) {
+amount = changeCommaToDot(amount);
 do {
-if (!isValidAmount(changeCommaToDot(amount))) {
+    if (!isValidAmount(amount)) {
     cout << "Niepoprawna kwota. Sprobuj ponownie: " << endl;
     cin >> amount;
     }
-    } while (!isValidAmount(changeCommaToDot(amount)));
-this -> amountString = amount;
-this -> amountNumber = atof(amount.c_str());
+    } while (!isValidAmount(amount));
+this -> amountNumber = stod(amount.c_str());
 }
 
 double Amount::getAmountNumber() {
 return amountNumber;
 }
 
-string Amount::getAmountString() {
-return amountString;
-}

@@ -34,7 +34,7 @@ int main () {
             break;
         }
     }  else if (users.getidLoggedUser() > 0) {
-
+    Incomes income(users.getidLoggedUser());
     char menuOperation;
 
         system("cls");
@@ -49,20 +49,21 @@ int main () {
         cout<<"6. Zmien haslo"<<endl;
         cout<<"7. Wyloguj"<<endl;
         cout<<"8. Zakoncz program"<<endl;
+        cin.sync();
         cin >> menuOperation;
         switch (menuOperation) {
         case '1': {
-            Incomes income(users.getidLoggedUser());
             income.addNewIncome();
             system("cls");
             break;
             }
-        case '2':
-            //contacts.findContact();
+        case '2': {
+            income.loadCurrentMonthIncomes();
             system("cls");
             break;
+            }
         case '3':
-            //contacts.showContacts();
+            income.loadPreviousMonthIncomes();
             system("cls");
             break;
         case '4':
