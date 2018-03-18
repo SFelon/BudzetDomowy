@@ -8,7 +8,7 @@
 using namespace std;
 
 class Amount {
-    double amountNumber;
+    float amountNumber;
 
     bool isValidAmount(const string& amount);
     string changeCommaToDot(string amount);
@@ -18,7 +18,7 @@ public:
     virtual ~Amount();
 
     void setAmount(string amount);
-    double getAmountNumber();
+    float getAmountNumber();
 };
 
 #endif // AMOUNT_H

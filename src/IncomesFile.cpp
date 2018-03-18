@@ -172,9 +172,9 @@ void IncomesFile::loadIncomesData(int idLoggedUser, vector <Income>& incomes) {
 
 void IncomesFile::saveIncomeData(Income& newIncome) {
 
-    ostringstream stringToDouble;
-    stringToDouble << newIncome.getAmount();
-    string newIncomeAmount = stringToDouble.str();
+    ostringstream FloatToString;
+    FloatToString << newIncome.getAmount();
+    string newIncomeAmount = FloatToString.str();
 
     CMarkup xmlFile;
     xmlFile.Load(MCD_T(incomesFileName));

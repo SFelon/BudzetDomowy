@@ -5,7 +5,7 @@ using namespace std;
 void Incomes::showIncomeData(Income income) {
     string date = income.getDateString();
     string name = income.getItemName();
-    double amount = income.getAmount();
+    float amount = income.getAmount();
     printf(" %-11s| %-20s| %.2f \n",
            date.c_str(),
            name.c_str(),

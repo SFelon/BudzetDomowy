@@ -8,8 +8,7 @@
 
 using namespace std;
 
-class Incomes
-{
+class Incomes {
     int idLoggedUser;
     IncomesFile incomeFile;
     vector <Income> incomes;

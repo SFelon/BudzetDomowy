@@ -37,10 +37,11 @@ void Amount::setAmount(string amount) {
             cin >> amount;
         }
     } while (!isValidAmount(changeCommaToDot(amount)));
-    this -> amountNumber = stod(amount.c_str());
+    string tempAmount = changeCommaToDot(amount);
+    this -> amountNumber = atof(tempAmount.c_str());
 }
 
-double Amount::getAmountNumber() {
+float Amount::getAmountNumber() {
     return amountNumber;
 }
 

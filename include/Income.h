@@ -13,7 +13,7 @@ class Income {
     int incomeDate;
     string incomeDateString;
     string incomeName;
-    double incomeAmount;
+    float incomeAmount;
 
 public:
     Income();
@@ -24,7 +24,7 @@ public:
     int getDate() const;
     string getDateString();
     string getItemName();
-    double getAmount();
+    float getAmount();
 
     void setIncomeId(int incomeId);
     void setUserId(int userId);
