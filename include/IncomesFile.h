@@ -11,20 +11,21 @@
 
 using namespace std;
 
-class IncomesFile
-{
+class IncomesFile {
+
     string incomesFileName;
+    int getCurrentYearMonth();
 
-    int getCurrentDate();
-
-    public:
-        IncomesFile();
-        virtual ~IncomesFile();
+public:
+    IncomesFile();
+    virtual ~IncomesFile();
 
     int loadLastIdNumber(int& userId);
     void saveIncomeData(Income& newIncome);
     void loadCurrentMonthIncomes(int idLoggedUser, vector <Income>& incomes);
     void loadPreviousMonthIncomes(int idLoggedUser, vector <Income>& incomes);
+    void loadSelectedPeriodIncomes(int idLoggedUser, vector <Income>& incomes,
+                                   int startingDate, int endDate);
     void loadIncomesData(int idLoggedUser, vector <Income>& incomes);
 };
 

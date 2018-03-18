@@ -7,16 +7,15 @@
 
 using namespace std;
 
-class Amount
-{
+class Amount {
     double amountNumber;
 
     bool isValidAmount(const string& amount);
     string changeCommaToDot(string amount);
 
-    public:
-        Amount();
-        virtual ~Amount();
+public:
+    Amount();
+    virtual ~Amount();
 
     void setAmount(string amount);
     double getAmountNumber();

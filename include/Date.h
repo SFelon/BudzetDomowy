@@ -11,16 +11,15 @@
 
 using namespace std;
 
-class Date
-{
+class Date {
     string date;
 
     int convertStringToInt(string date);
     bool isValidDate(int date);
 
-    public:
-        Date();
-        virtual ~Date();
+public:
+    Date();
+    virtual ~Date();
 
     void setDate(string date);
     string getDateString();

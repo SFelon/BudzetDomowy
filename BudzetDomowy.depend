@@ -20,17 +20,17 @@
 	<iostream>
 	<algorithm>
 
-1520882032 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
+1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\usersfile.cpp
 	"UsersFile.h"
 
-1520880402 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\usersfile.h
 	<iostream>
 	<windows.h>
 	<vector>
 	"Markup.h"
 	"User.h"
 
-1521291972 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1521360234 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	"UserManager.h"
 	"Incomes.h"
@@ -45,26 +45,26 @@
 1520880893 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
 	"UserManager.h"
 
-1521278234 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
 	<iostream>
 	<algorithm>
 	<stdlib.h>
 
-1521282898 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
+1521364989 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
 	"Amount.h"
 
-1521288096 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
+1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
 	"Income.h"
 
-1521288288 d:\kurs c++\_projekty\budzetdomowy\include\income.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\income.h
 	<iostream>
 	"Date.h"
 	"Amount.h"
 
-1521282172 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
+1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\date.cpp
 	"Date.h"
 
-1521282152 d:\kurs c++\_projekty\budzetdomowy\include\date.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\date.h
 	<iomanip>
 	<ctime>
 	<chrono>
@@ -72,21 +72,21 @@
 	<iostream>
 	<algorithm>
 
-1521292108 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
-1521291972 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
 	<vector>
 	"IncomesFile.h"
 	"Income.h"
 
-1521291330 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
+1521364396 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
 	<iostream>
 	<windows.h>
 	<ostream>
 	"Markup.h"
 	"Income.h"
 
-1521291981 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
+1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 

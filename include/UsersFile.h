@@ -10,12 +10,11 @@
 
 using namespace std;
 
-class UsersFile
-{
+class UsersFile {
     string fileName;
-    public:
-        UsersFile();
-        virtual ~UsersFile();
+public:
+    UsersFile();
+    virtual ~UsersFile();
 
     void loadUsersData(vector <User>& users);
     void saveUsersData(User &newUser);

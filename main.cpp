@@ -42,9 +42,9 @@ int main () {
         cout<<"  BUDZET DOMOWY:  "<<endl;
         cout<<"------------------"<<endl;
         cout<<"1. Dodaj nowy przychod"<<endl;
-        cout<<"2. W budowie"<<endl;
-        cout<<"3. W budowie"<<endl;
-        cout<<"4. W budowie"<<endl;
+        cout<<"2. Wyswietl przychody z obecnego miesiaca"<<endl;
+        cout<<"3. Wyswietl przychody z poprzedniego miesiaca"<<endl;
+        cout<<"4. Wyswietl przychody z wybranego okreu"<<endl;
         cout<<"5. W budowie"<<endl;
         cout<<"6. Zmien haslo"<<endl;
         cout<<"7. Wyloguj"<<endl;
@@ -67,7 +67,7 @@ int main () {
             system("cls");
             break;
         case '4':
-            //contacts.changeContactData();
+            income.loadSelectedPeriodIncomes(20171201,20180331);
             system("cls");
             break;
         case '5':

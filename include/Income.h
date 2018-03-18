@@ -7,8 +7,7 @@
 
 using namespace std;
 
-class Income
-{
+class Income {
     int idLoggedUser;
     int incomeId;
     int incomeDate;
@@ -16,24 +15,21 @@ class Income
     string incomeName;
     double incomeAmount;
 
-    public:
-        Income();
-        virtual ~Income();
-
-    void setItemName(string itemName);
-    string getItemName();
+public:
+    Income();
+    virtual ~Income();
 
     int getIncomeId();
     int getUserId();
     int getDate() const;
     string getDateString();
-    string getItem();
+    string getItemName();
     double getAmount();
 
     void setIncomeId(int incomeId);
     void setUserId(int userId);
     void setDate(string date);
-    void setItem(string item);
+    void setItemName(string itemName);
     void setAmount(string amount);
 };
 
