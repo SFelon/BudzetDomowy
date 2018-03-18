@@ -121,14 +121,17 @@ void Incomes::addNewIncome() {
 void Incomes::loadCurrentMonthIncomes() {
     incomeFile.loadCurrentMonthIncomes(idLoggedUser,incomes);
     printSortedIncomesInTable(incomes);
+    incomes.clear();
 }
 
 void Incomes::loadPreviousMonthIncomes() {
     incomeFile.loadPreviousMonthIncomes(idLoggedUser,incomes);
     printSortedIncomesInTable(incomes);
+    incomes.clear();
 }
 
 void Incomes::loadSelectedPeriodIncomes(int startingDate, int endDate) {
     incomeFile.loadSelectedPeriodIncomes(idLoggedUser,incomes,startingDate, endDate);
     printSortedIncomesInTable(incomes);
+    incomes.clear();
 }

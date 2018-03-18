@@ -30,7 +30,7 @@
 	"Markup.h"
 	"User.h"
 
-1521371618 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1521372209 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	"UserManager.h"
 	"BudgetManager.h"
@@ -72,7 +72,7 @@
 	<iostream>
 	<algorithm>
 
-1521369433 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1521372930 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
 1521369741 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
@@ -90,6 +90,9 @@
 1521364396 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 
-1521371535 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
+1521372209 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
 	"Incomes.h"
+
+1521372209 source:d:\kurs c++\_projekty\budzetdomowy\src\budgetmanager.cpp
+	"BudgetManager.h"
 
