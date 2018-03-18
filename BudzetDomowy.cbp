@@ -37,6 +37,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Amount.h" />
+		<Unit filename="include/BudgetManager.h" />
 		<Unit filename="include/Date.h" />
 		<Unit filename="include/Income.h" />
 		<Unit filename="include/Incomes.h" />
@@ -47,6 +48,7 @@
 		<Unit filename="include/UsersFile.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Amount.cpp" />
+		<Unit filename="src/BudgetManager.cpp" />
 		<Unit filename="src/Date.cpp" />
 		<Unit filename="src/Income.cpp" />
 		<Unit filename="src/Incomes.cpp" />

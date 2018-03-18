@@ -31,7 +31,6 @@ void Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),10);
     cout << "            Suma przychodow wynosi: " << fixed << setprecision(2) << sumOfIncomes << endl;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
-    Sleep(5000);
 }
 
 

@@ -22,7 +22,6 @@ public:
     Incomes(int userId);
     virtual ~Incomes();
 
-
     void addNewIncome();
     void loadCurrentMonthIncomes();
     void loadPreviousMonthIncomes();
