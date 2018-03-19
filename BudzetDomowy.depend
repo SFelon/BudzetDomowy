@@ -30,33 +30,33 @@
 	"Markup.h"
 	"User.h"
 
-1521372209 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1521488540 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	"UserManager.h"
 	"BudgetManager.h"
 
-1520881632 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
+1521489251 d:\kurs c++\_projekty\budzetdomowy\include\usermanager.h
 	<iostream>
 	<windows.h>
 	<cstdlib>
 	"UsersFile.h"
 	"Markup.h"
 
-1520880893 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
+1521489262 source:d:\kurs c++\_projekty\budzetdomowy\src\usermanager.cpp
 	"UserManager.h"
 
-1521404970 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
+1521487716 d:\kurs c++\_projekty\budzetdomowy\include\amount.h
 	<iostream>
 	<algorithm>
 	<stdlib.h>
 
-1521406335 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
+1521487716 source:d:\kurs c++\_projekty\budzetdomowy\src\amount.cpp
 	"Amount.h"
 
-1521404970 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
+1521487716 source:d:\kurs c++\_projekty\budzetdomowy\src\income.cpp
 	"Income.h"
 
-1521404970 d:\kurs c++\_projekty\budzetdomowy\include\income.h
+1521487716 d:\kurs c++\_projekty\budzetdomowy\include\income.h
 	<iostream>
 	"Date.h"
 	"Amount.h"
@@ -72,7 +72,7 @@
 	<iostream>
 	<algorithm>
 
-1521404970 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1521488739 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
 1521404983 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
@@ -80,19 +80,19 @@
 	"IncomesFile.h"
 	"Income.h"
 
-1521364396 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
+1521487737 d:\kurs c++\_projekty\budzetdomowy\include\incomesfile.h
 	<iostream>
 	<windows.h>
 	<ostream>
 	"Markup.h"
 	"Income.h"
 
-1521404970 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
+1521487716 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 
-1521372209 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
+1521488540 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
 	"Incomes.h"
 
-1521372209 source:d:\kurs c++\_projekty\budzetdomowy\src\budgetmanager.cpp
+1521488671 source:d:\kurs c++\_projekty\budzetdomowy\src\budgetmanager.cpp
 	"BudgetManager.h"
 

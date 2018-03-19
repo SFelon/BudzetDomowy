@@ -12,6 +12,7 @@ class BudgetManager {
         BudgetManager(int userId);
         virtual ~BudgetManager();
 
+    void addNewIncome();
     void currentMonthBalance();
     void previousMonthBalance();
     void selectedPeriodBalance();

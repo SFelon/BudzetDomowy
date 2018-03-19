@@ -5,13 +5,10 @@
 using namespace std;
 
 int main () {
-    UserManager users;
-    UsersFile newUserFile;
-    newUserFile.loadUsersData(users.getUsersData());
+    UserManager userManager;
     char mainMenuOperation;
-
     while(true) {
-    if ( users.getidLoggedUser() == 0 ) {
+    if ( userManager.getidLoggedUser() == 0 ) {
         system("cls");
         cout<<"------------------"<<endl;
         cout<<"  BUDZET DOMOWY:  "<<endl;
@@ -22,20 +19,19 @@ int main () {
         cin >> mainMenuOperation;
         switch(mainMenuOperation) {
         case '1':
-            users.registerNewUser();
+            userManager.registerNewUser();
             system("cls");
             break;
         case '2':
-            users.loginUser();
+            userManager.loginUser();
             system("cls");
             break;
         case '9':
             exit(0);
             break;
         }
-    }  else if (users.getidLoggedUser() > 0) {
-    Incomes newIncome(users.getidLoggedUser());
-    BudgetManager incomesList(users.getidLoggedUser());
+    }  else if (userManager.getidLoggedUser() > 0) {
+    BudgetManager budgetManager(userManager.getidLoggedUser());
     char menuOperation;
 
         system("cls");
@@ -54,7 +50,7 @@ int main () {
         cin >> menuOperation;
         switch (menuOperation) {
         case '1': {
-            newIncome.addNewIncome();
+            budgetManager.addNewIncome();
             system("cls");
             break;
             }
@@ -64,23 +60,23 @@ int main () {
             break;
             }
         case '3':
-            incomesList.currentMonthBalance();
+            budgetManager.currentMonthBalance();
             system("cls");
             break;
         case '4':
-            incomesList.previousMonthBalance();
+            budgetManager.previousMonthBalance();
             system("cls");
             break;
         case '5':
-            incomesList.selectedPeriodBalance();
+            budgetManager.selectedPeriodBalance();
             system("cls");
             break;
         case '6':
-            users.changePassword();
+            userManager.changePassword();
             system("cls");
             break;
         case '7':
-            users.setidLoggedUser(0);
+            userManager.setidLoggedUser(0);
             break;
         case '8':
             exit(0);

@@ -23,6 +23,12 @@ bool Amount::isValidAmount(const string& amount) {
     }
 }
 
+double Amount::stringToDouble(string number) {
+    double convertedNumber = stod(number);
+    double result = floor(convertedNumber * 100) / 100;
+    return result;
+}
+
 
 Amount::Amount() {
     amountNumber = 0;
@@ -37,11 +43,10 @@ void Amount::setAmount(string amount) {
             cin >> amount;
         }
     } while (!isValidAmount(changeCommaToDot(amount)));
-    string tempAmount = changeCommaToDot(amount);
-    this -> amountNumber = atof(tempAmount.c_str());
+    this -> amountNumber = stringToDouble(changeCommaToDot(amount));
 }
 
-float Amount::getAmountNumber() {
+double Amount::getAmountNumber() {
     return amountNumber;
 }
 

@@ -12,7 +12,10 @@ int UserManager::getNewUserID()
 }
 
 
-UserManager::UserManager() {;}
+UserManager::UserManager() {
+UsersFile usersFile;
+usersFile.loadUsersData(this->users);
+}
 
 UserManager::~UserManager() {;}
 
@@ -23,10 +26,6 @@ int UserManager::getidLoggedUser() {
 
 void UserManager::setidLoggedUser(int idLoggedUser) {
    this -> idLoggedUser = idLoggedUser;
-}
-
-vector <User>& UserManager::getUsersData(){
-    return this->users;
 }
 
 

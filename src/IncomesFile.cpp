@@ -11,6 +11,12 @@ int IncomesFile::getCurrentYearMonth() {
     return  stoi(dateStream.str());
 }
 
+string IncomesFile::doubleToString(double number) {
+    stringstream sstream;
+    sstream << fixed << setprecision(2) << number;
+    return sstream.str();
+}
+
 
 IncomesFile::IncomesFile() {
 incomesFileName = "incomes.xml";
@@ -171,11 +177,6 @@ void IncomesFile::loadIncomesData(int idLoggedUser, vector <Income>& incomes) {
 }
 
 void IncomesFile::saveIncomeData(Income& newIncome) {
-
-    ostringstream FloatToString;
-    FloatToString << newIncome.getAmount();
-    string newIncomeAmount = FloatToString.str();
-
     CMarkup xmlFile;
     xmlFile.Load(MCD_T(incomesFileName));
     xmlFile.ResetPos();
@@ -189,7 +190,7 @@ void IncomesFile::saveIncomeData(Income& newIncome) {
     xmlFile.AddElem( "USERID", newIncome.getUserId() );
     xmlFile.AddElem( "INCOMEDATE", newIncome.getDateString() );
     xmlFile.AddElem( "INCOMENAME", newIncome.getItemName() );
-    xmlFile.AddElem( "INCOMEAMOUNT", newIncomeAmount );
+    xmlFile.AddElem( "INCOMEAMOUNT", doubleToString(newIncome.getAmount()) );
     xmlFile.OutOfElem();
     xmlFile.Save(MCD_T(incomesFileName));
 

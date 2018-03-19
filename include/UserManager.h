@@ -24,8 +24,7 @@ class UserManager
     int getidLoggedUser();
     void setidLoggedUser(int idLoggedUser);
 
-    vector <User>& getUsersData();
-
+    void loadUsersData(vector <User>& users);
     void registerNewUser();
     void loginUser();
     void changePassword();

@@ -8,17 +8,18 @@
 using namespace std;
 
 class Amount {
-    float amountNumber;
+    double amountNumber;
 
     bool isValidAmount(const string& amount);
     string changeCommaToDot(string amount);
+    double stringToDouble(string number);
 
 public:
     Amount();
     virtual ~Amount();
 
     void setAmount(string amount);
-    float getAmountNumber();
+    double getAmountNumber();
 };
 
 #endif // AMOUNT_H

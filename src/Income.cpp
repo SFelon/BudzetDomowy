@@ -64,7 +64,7 @@ void Income::setAmount(string enteredAmount) {
 }
 
 
-float Income::getAmount() {
+double Income::getAmount() {
     return incomeAmount;
 }
 

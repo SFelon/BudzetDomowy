@@ -9,7 +9,13 @@ BudgetManager::BudgetManager(int userId) :
 
 BudgetManager::~BudgetManager() {}
 
+void BudgetManager::addNewIncome() {
+incomesList.addNewIncome();
+}
+
+
 void BudgetManager::currentMonthBalance() {
+    system("cls");
     char menuOperation = 0;
     incomesList.loadCurrentMonthIncomes();
 
@@ -21,6 +27,7 @@ void BudgetManager::currentMonthBalance() {
 }
 
 void BudgetManager::previousMonthBalance() {
+    system("cls");
     char menuOperation = 0;
     incomesList.loadPreviousMonthIncomes();
 
@@ -41,7 +48,7 @@ void BudgetManager::selectedPeriodBalance() {
         cout << "Podaj date poczatkowa (RRRR-MM-DD): " << endl;
         cin >> firstDate;
         startingDate.setDate(firstDate);
-        cout << "Podaj date koncowa (RRRR-MM-DD): " << endl;
+        cout << "Podaj date koncowa (RRRR-MM-DD): " << endl << endl;
         cin >> secondDate;
         endDate.setDate(secondDate);
         incomesList.loadSelectedPeriodIncomes(startingDate.getDateNumber(),endDate.getDateNumber());

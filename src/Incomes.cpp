@@ -5,7 +5,7 @@ using namespace std;
 void Incomes::showIncomeData(Income income) {
     string date = income.getDateString();
     string name = income.getItemName();
-    float amount = income.getAmount();
+    double amount = income.getAmount();
     printf(" %-11s| %-20s| %.2f \n",
            date.c_str(),
            name.c_str(),
@@ -20,7 +20,7 @@ void Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
     });
 
     vector <Income> ::iterator it;
-    float sumOfIncomes = 0;
+    double sumOfIncomes = 0;
     printf(" %-11s| %-20s| %-7s \n", "Data", "Nazwa", "Kwota");
     cout <<"--------------------------------------------"<<endl;
     for ( it = incomes.begin(); it != incomes.end(); ++it) {

@@ -15,6 +15,7 @@ class IncomesFile {
 
     string incomesFileName;
     int getCurrentYearMonth();
+    string doubleToString(double number);
 
 public:
     IncomesFile();
