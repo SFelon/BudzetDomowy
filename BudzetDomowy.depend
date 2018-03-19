@@ -30,7 +30,7 @@
 	"Markup.h"
 	"User.h"
 
-1521488540 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
+1521492373 source:d:\kurs c++\_projekty\budzetdomowy\main.cpp
 	<iostream>
 	"UserManager.h"
 	"BudgetManager.h"
@@ -72,10 +72,10 @@
 	<iostream>
 	<algorithm>
 
-1521488739 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
+1521493348 source:d:\kurs c++\_projekty\budzetdomowy\src\incomes.cpp
 	"Incomes.h"
 
-1521404983 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
+1521493348 d:\kurs c++\_projekty\budzetdomowy\include\incomes.h
 	<vector>
 	"IncomesFile.h"
 	"Income.h"
@@ -90,9 +90,36 @@
 1521487716 source:d:\kurs c++\_projekty\budzetdomowy\src\incomesfile.cpp
 	"IncomesFile.h"
 
-1521488540 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
+1521492254 d:\kurs c++\_projekty\budzetdomowy\include\budgetmanager.h
 	"Incomes.h"
+	"Expenses.h"
 
-1521488671 source:d:\kurs c++\_projekty\budzetdomowy\src\budgetmanager.cpp
+1521492430 source:d:\kurs c++\_projekty\budzetdomowy\src\budgetmanager.cpp
 	"BudgetManager.h"
+
+1521493348 d:\kurs c++\_projekty\budzetdomowy\include\expenses.h
+	<vector>
+	"ExpensesFile.h"
+	"Expense.h"
+
+1521490453 d:\kurs c++\_projekty\budzetdomowy\include\expensesfile.h
+	<iostream>
+	<windows.h>
+	<ostream>
+	"Markup.h"
+	"Expense.h"
+
+1521492272 d:\kurs c++\_projekty\budzetdomowy\include\expense.h
+	<iostream>
+	"Date.h"
+	"Amount.h"
+
+1521490317 source:d:\kurs c++\_projekty\budzetdomowy\src\expense.cpp
+	"Expense.h"
+
+1521493348 source:d:\kurs c++\_projekty\budzetdomowy\src\expenses.cpp
+	"Expenses.h"
+
+1521490937 source:d:\kurs c++\_projekty\budzetdomowy\src\expensesfile.cpp
+	"ExpensesFile.h"
 

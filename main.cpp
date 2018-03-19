@@ -39,10 +39,10 @@ int main () {
         cout<<"  BUDZET DOMOWY:  "<<endl;
         cout<<"------------------"<<endl;
         cout<<"1. Dodaj nowy przychod"<<endl;
-        cout<<"2. W budowie"<<endl;
-        cout<<"3. Wyswietl przychody z obecnego miesiaca"<<endl;
-        cout<<"4. Wyswietl przychody z poprzedniego miesiaca"<<endl;
-        cout<<"5. Wyswietl przychody z wybranego okreu"<<endl;
+        cout<<"2. Dodaj nowy wydatek"<<endl;
+        cout<<"3. Wyswietl bilans z obecnego miesiaca"<<endl;
+        cout<<"4. Wyswietl bilans z poprzedniego miesiaca"<<endl;
+        cout<<"5. Wyswietl bilans z wybranego okreu"<<endl;
         cout<<"6. Zmien haslo"<<endl;
         cout<<"7. Wyloguj"<<endl;
         cout<<"8. Zakoncz program"<<endl;
@@ -55,7 +55,7 @@ int main () {
             break;
             }
         case '2': {
-            //
+            budgetManager.addNewExpense();
             system("cls");
             break;
             }

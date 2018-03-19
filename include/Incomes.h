@@ -14,7 +14,7 @@ class Incomes {
     vector <Income> incomes;
 
     void showIncomeData(Income income);
-    void printSortedIncomesInTable(vector <Income> &incomes);
+    double printSortedIncomesInTable(vector <Income> &incomes);
     string getCurrentDate();
 
 public:
@@ -22,9 +22,9 @@ public:
     virtual ~Incomes();
 
     void addNewIncome();
-    void loadCurrentMonthIncomes();
-    void loadPreviousMonthIncomes();
-    void loadSelectedPeriodIncomes(int startingDate, int endDate);
+    double loadCurrentMonthIncomes();
+    double loadPreviousMonthIncomes();
+    double loadSelectedPeriodIncomes(int startingDate, int endDate);
 };
 
 #endif // INCOMES_H

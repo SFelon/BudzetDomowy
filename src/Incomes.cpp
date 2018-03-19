@@ -13,7 +13,7 @@ void Incomes::showIncomeData(Income income) {
 }
 
 
-void Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
+double Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
 
     sort( incomes.begin( ), incomes.end( ), [ ]( const Income& lhs, const Income& rhs ) {
         return lhs.getDate() < rhs.getDate();
@@ -21,6 +21,7 @@ void Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
 
     vector <Income> ::iterator it;
     double sumOfIncomes = 0;
+    cout <<"-----------------PRZYCHODY------------------"<<endl;
     printf(" %-11s| %-20s| %-7s \n", "Data", "Nazwa", "Kwota");
     cout <<"--------------------------------------------"<<endl;
     for ( it = incomes.begin(); it != incomes.end(); ++it) {
@@ -31,6 +32,7 @@ void Incomes::printSortedIncomesInTable(vector <Income> &incomes) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),10);
     cout << "            Suma przychodow wynosi: " << fixed << setprecision(2) << sumOfIncomes << endl;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+    return sumOfIncomes;
 }
 
 
@@ -118,20 +120,20 @@ void Incomes::addNewIncome() {
     } while(menuOperation == '1');
 }
 
-void Incomes::loadCurrentMonthIncomes() {
+double Incomes::loadCurrentMonthIncomes() {
+    incomes.clear();
     incomeFile.loadCurrentMonthIncomes(idLoggedUser,incomes);
-    printSortedIncomesInTable(incomes);
-    incomes.clear();
+    return printSortedIncomesInTable(incomes);
 }
 
-void Incomes::loadPreviousMonthIncomes() {
+double Incomes::loadPreviousMonthIncomes() {
+    incomes.clear();
     incomeFile.loadPreviousMonthIncomes(idLoggedUser,incomes);
-    printSortedIncomesInTable(incomes);
-    incomes.clear();
+    return printSortedIncomesInTable(incomes);
 }
 
-void Incomes::loadSelectedPeriodIncomes(int startingDate, int endDate) {
-    incomeFile.loadSelectedPeriodIncomes(idLoggedUser,incomes,startingDate, endDate);
-    printSortedIncomesInTable(incomes);
+double Incomes::loadSelectedPeriodIncomes(int startingDate, int endDate) {
     incomes.clear();
+    incomeFile.loadSelectedPeriodIncomes(idLoggedUser,incomes,startingDate, endDate);
+    return printSortedIncomesInTable(incomes);
 }
