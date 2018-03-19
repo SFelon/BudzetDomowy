@@ -79,7 +79,7 @@ void Expenses::addNewExpense() {
             newDate = getCurrentDate();
             cout << "Dzisiejsza data to: "               << newDate << endl;
             newExpense.setDate(newDate);
-            cout << "Podaj nazwe ponieionego wydatku: " << endl;
+            cout << "Podaj nazwe poniesionego wydatku: " << endl;
             cin.clear();
             cin.sync();
             getline(cin, newItemName);

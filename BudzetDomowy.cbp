@@ -39,6 +39,9 @@
 		<Unit filename="include/Amount.h" />
 		<Unit filename="include/BudgetManager.h" />
 		<Unit filename="include/Date.h" />
+		<Unit filename="include/Expense.h" />
+		<Unit filename="include/Expenses.h" />
+		<Unit filename="include/ExpensesFile.h" />
 		<Unit filename="include/Income.h" />
 		<Unit filename="include/Incomes.h" />
 		<Unit filename="include/IncomesFile.h" />
@@ -50,6 +53,9 @@
 		<Unit filename="src/Amount.cpp" />
 		<Unit filename="src/BudgetManager.cpp" />
 		<Unit filename="src/Date.cpp" />
+		<Unit filename="src/Expense.cpp" />
+		<Unit filename="src/Expenses.cpp" />
+		<Unit filename="src/ExpensesFile.cpp" />
 		<Unit filename="src/Income.cpp" />
 		<Unit filename="src/Incomes.cpp" />
 		<Unit filename="src/IncomesFile.cpp" />
